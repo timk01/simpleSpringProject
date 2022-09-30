@@ -7,6 +7,7 @@ public class User {
     private String email;
 
     public User() {
+
     }
 
     public User(int id, String fio, int age, String email) {
