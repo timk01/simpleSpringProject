@@ -1,5 +1,6 @@
 package com.example.spring_simple_project.controller;
 
+import com.example.spring_simple_project.exception.CustomException;
 import com.example.spring_simple_project.model.User;
 import com.example.spring_simple_project.service.UserService;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +18,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User getById(@PathVariable int id) {
+    public User getById(@PathVariable int id) throws CustomException {
         return userService.getById(id);
     }
 
